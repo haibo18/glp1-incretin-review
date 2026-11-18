@@ -1,0 +1,6 @@
+name = "Glp1Paper"
+version = "0.1.0"
+defaultTargets = ["Glp1Paper"]
+
+[[lean_lib]]
+name = "Glp1Paper"
