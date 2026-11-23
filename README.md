@@ -2,15 +2,19 @@
 
 GLP‑1 肠促胰素通路综述论文 + Lean 4 形式化核验骨架。
 
+**English version: [README.en.md](./README.en.md)**
+
 本仓库沉淀「GLP‑1 的发现与长效 GLP‑1 疗法（糖尿病、肥胖调控）」课题的
-研究内容、结论与可机器核验的形式化命题，按语义化版本持续维护。
+研究内容、结论与可机器核验的形式化命题，按语义化版本持续维护，
+并提供中英双语论文与文档。
 
 ## 目录结构
 
 ```
 glp1-incretin-review/
 ├── paper/
-│   └── GLP1_incretin_review.md   # 完整综述论文
+│   ├── GLP1_incretin_review.md    # 中文综述
+│   └── GLP1_incretin_review_en.md # English review
 ├── Glp1Paper.lean                # Lean 库根模块
 ├── Glp1Paper/
 │   ├── Basic.lean
@@ -20,7 +24,7 @@ glp1-incretin-review/
 ├── lake-manifest.json
 ├── .github/workflows/             # Lean CI
 ├── CHANGELOG.md
-└── README.md
+└── README.md / README.en.md
 ```
 
 ## 论文要点
@@ -49,6 +53,13 @@ lake build
 
 > 医学因果解释以同行评审文献与临床试验报告为准；本工程不把临床结论
 > 当作可由算术证明的命题。工程内 `sorry` / `admit` / `axiom` 数量为 0。
+
+## 双语版本管理
+
+- 论文：`paper/GLP1_incretin_review.md`（中文）与 `paper/GLP1_incretin_review_en.md`（英文）内容对齐；
+- 文档：`README.md`（中文）与 `README.en.md`（英文）互相链接；
+- 变更日志：`CHANGELOG.md` 同时保留中英两段说明；
+- 论文修订时应同步更新两个语言版本，提交信息在 subject 中注明 `docs(zh)` / `docs(en)`。
 
 ## 版本维护
 
